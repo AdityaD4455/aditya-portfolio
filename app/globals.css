@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #050816;
+  color: #f5f7ff;
+}
+
+::selection {
+  background: #8b5cf6;
+  color: #050816;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2a4a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(16, 26, 54, 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.glass-border-glow {
+  position: relative;
+}
+.glass-border-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.5),
+    rgba(0, 229, 255, 0.1),
+    rgba(20, 241, 149, 0.4)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.glass-border-glow:hover::before {
+  opacity: 1;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #00e5ff 50%, #14f195 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section eyebrow / mono label */
+.eyebrow {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #00e5ff;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
