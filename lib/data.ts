@@ -6,7 +6,7 @@ export const profile = {
   location: "Navi Mumbai, Maharashtra, India",
   email: "adityadhonde249@mail.com",
   github: "https://github.com/AdityaD4455",
-  linkedin: "https://linkedin.com/in/adityadhonde4455",
+  linkedin: "https://www.linkedin.com/in/aditya-dhonde4455/",
   roles: [
     "Data Scientist",
     "Machine Learning Engineer",
