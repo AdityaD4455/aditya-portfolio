@@ -101,7 +101,7 @@ export default function Contact() {
                   LinkedIn
                 </p>
                 <p className="font-medium text-sm mt-0.5">
-                  https://www.linkedin.com/in/aditya-dhonde4455/
+                   linkedin.com/in/aditya-dhonde4455
                 </p>
               </div>
             </a>
